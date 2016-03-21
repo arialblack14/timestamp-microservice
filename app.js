@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', timestampRouter);
 // Serve static files
 app.use(express.static(path.join(__dirname, '/public')));
+
 // Start the server
 app.listen(port, hostname, function() {
   console.log(`Server running at http://${hostname}:${port}`);
