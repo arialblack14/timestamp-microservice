@@ -7,12 +7,12 @@ module.exports = function(val) {
   // console.log(dateStr);
 
   // Return the natural and unix output of val
-  if (!isNaN(dateStr)) {
+  if (!isNaN(dateStr) && Number(dateStr) > 0) {
     return {
       "unix": dateStr,
       "natural": val
     };
-  } else if (!isNaN(unix_stamp)) {
+  } else if (!isNaN(unix_stamp) && unix_stamp > 0) {
       return {
         "unix": val,
         "natural": unix_stamp.format('MMM DD, YYYY')
