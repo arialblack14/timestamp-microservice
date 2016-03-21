@@ -5,17 +5,17 @@ module.exports = function(val) {
   var unix_stamp = moment.unix(Number(val));
   var dateStr = moment(new Date(val)).unix();
   // console.log(dateStr);
-
+  var result = {
+    "unix": null,
+    "natural": null
+  };
   // Return the natural and unix output of val
   if (!isNaN(dateStr) && Number(dateStr) > 0) {
-    return {
-      "unix": dateStr,
-      "natural": val
-    };
+    result.unix = dateStr;
+    result.natural = val;
   } else if (!isNaN(unix_stamp) && unix_stamp > 0) {
-      return {
-        "unix": val,
-        "natural": unix_stamp.format('MMM DD, YYYY')
-      };
+      result.unix = val;
+      result.natural = unix_stamp.format('MMM DD, YYYY');
     }
+    return result;
 };
