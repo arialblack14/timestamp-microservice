@@ -20,6 +20,10 @@ timestampRouter.route('/')
 });
 */
 
+timestampRouter.get('../public/index.css', function(req, res){
+  res.sendFile(__dirname + '/public/index.css');
+});
+
 timestampRouter.route('/:data')
 .get(function(req, res, next) {
   res.send(timeCheck(req.params.data));
