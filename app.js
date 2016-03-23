@@ -6,7 +6,7 @@ var express = require('express'),
 
 var timestampRouter = require('./routes/timestampRouter');
 // Set port and hostname of server
-var port = process.env.PORT || 8080,
+var port = env.PORT || 8080,
     hostname = 'localhost';
 
 //Build our app
