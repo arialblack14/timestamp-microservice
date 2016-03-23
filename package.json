@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/arialblack14/timestamp-microservice#readme",
   "engines": {
-    "node": "5.8.0"
+    "node": "5.8.0",
+    "npm": "3.7.3"
   }
 }
